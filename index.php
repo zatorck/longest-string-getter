@@ -1,28 +1,30 @@
 <?php
+declare(strict_types=1);
+
 $object = new DateTime();
-try {
-    echo getLongestString('sds', 'sadsa', 'sadsa', 'asdasdsadsa');
-} catch (Exception $e) {
-    echo $e;
-}
+//try {
+    echo getLongestString('sds', 's','sadsa', 's', 'sadsa', 'asdasdsadsa');
+//} catch (InvalidArgumentException $e) {
+//    echo $e;
+//}
 
 /**
  * Get lognest string
  *
  * @param string $firstString
  * @param string $secondString
- * @param string $string, ...
+ * @param string $string , ...
  *
  * @return string
  * @throws Exception
  */
-function getLongestString(string $firstString, string $secondString)
+function getLongestString($firstString, $secondString)
 {
     $biggestStrlen = 0;
     $longestString = '';
     foreach (func_get_args() as $k => $param) {
         if (!is_string($param)) {
-            throw new Exception('Invalid type for param no.'.($k + 1));
+            throw new InvalidArgumentException('Invalid type for param no. '.($k + 1));
         }
         $strlen = strlen($param);
         if ($strlen > $biggestStrlen) {
