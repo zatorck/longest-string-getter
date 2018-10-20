@@ -1,24 +1,20 @@
 <?php
 declare(strict_types=1);
 
-$object = new DateTime();
 //try {
-    echo getLongestString('sds', 's','sadsa', 's', 'sadsa', 'asdasdsadsa');
+echo getLongestString('sds', 's', 3,'sadsa', 's', 'sadsa', 'asdasdsadsa');
 //} catch (InvalidArgumentException $e) {
 //    echo $e;
 //}
 
 /**
- * Get lognest string
- *
  * @param string $firstString
  * @param string $secondString
- * @param string $string , ...
+ * @param string ...$params
  *
  * @return string
- * @throws Exception
  */
-function getLongestString($firstString, $secondString)
+function getLongestString(string $firstString, string $secondString, string ...$params)
 {
     $biggestStrlen = 0;
     $longestString = '';

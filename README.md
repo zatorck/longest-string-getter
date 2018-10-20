@@ -1,7 +1,7 @@
 # Longest String Getter
 Task #2 
 
-## Test todo
+## Test proposals
 #### 1
     function testThrowOfInvalidArgumentException(): void
     {
