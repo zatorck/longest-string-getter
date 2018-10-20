@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 //try {
-echo getLongestString('sds', 's', 3,'sadsa', 's', 'sadsa', 'asdasdsadsa');
+echo getLongestString('sds', 's', 'sadsa', 's', 'sadsa', 'asdasdsadsa');
 //} catch (InvalidArgumentException $e) {
 //    echo $e;
 //}
