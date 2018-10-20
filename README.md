@@ -1,1 +1,2 @@
-# longest-string-getter
+# Longest String Getter
+Task #2 
